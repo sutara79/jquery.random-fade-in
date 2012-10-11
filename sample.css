@@ -1,0 +1,196 @@
+pre {
+	clear:both;
+	background: #444;
+	color:#fff;
+	font-size:15px;
+	padding:8px;
+}
+h3 {
+	margin-top:2em;
+	border-left:8px solid #486;
+	border-bottom:2px solid #486;
+	padding:4px 8px;
+}
+.green{
+	color:#2e4;
+}
+.red{
+	color:#e42;
+}
+#language {
+	padding:4px;
+	border:1px solid #aaa;
+	background:#eef;
+	position:fixed;
+	top:0px;
+	right:0px;
+}
+
+/*************************************************
+例1
+*************************************************/
+/* フェードインさせる要素を包含する */
+#boxset {
+	width:232px;
+}
+
+/* 未表示の場合でも表示領域を確保するために必要 */
+#boxset div {
+	width:50px;
+	height:50px;
+	float:left;
+	overflow:hidden;
+	margin-right:8px;
+	margin-bottom:8px;
+}
+
+/* 実際にフェードインさせる要素 */
+#boxset div p {
+	margin:0;
+	background:#097;
+	color:#fff;
+	font-size:20px;
+	width:100%;
+	height:100%;
+	display:none;
+	
+	padding-top:14px;
+	text-align:center;
+	box-sizing:border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+
+/*************************************************
+例2
+*************************************************/
+/* フェードインさせる要素を包含する */
+#boxset2 {
+	width:348px;
+	height:166px;
+	position:relative;
+}
+
+/* 未表示の場合でも表示領域を確保するために必要 */
+#boxset2 div {
+	position:absolute;
+	margin-right:8px;
+	margin-bottom:8px;
+}
+#boxset2 div:nth-child(1) {
+	width:108px;
+	height:108px;
+	top:0;
+	left:0;
+}
+#boxset2 div:nth-child(2) {
+	width:50px;
+	height:50px;
+	top:0;
+	left:116px;
+}
+#boxset2 div:nth-child(3) {
+	width:50px;
+	height:50px;
+	top:0;
+	left:174px;
+}
+#boxset2 div:nth-child(4) {
+	width:108px;
+	height:108px;
+	top:0;
+	left:232px;
+}
+#boxset2 div:nth-child(5) {
+	width:50px;
+	height:50px;
+	top:116px;
+	left:0px;
+}
+#boxset2 div:nth-child(6) {
+	width:50px;
+	height:50px;
+	top:116px;
+	left:58px;
+}
+#boxset2 div:nth-child(7) {
+	width:108px;
+	height:108px;
+	top:58px;
+	left:116px;
+}
+#boxset2 div:nth-child(8) {
+	width:50px;
+	height:50px;
+	top:116px;
+	left:232px;
+}
+#boxset2 div:nth-child(9) {
+	width:50px;
+	height:50px;
+	top:116px;
+	left:290px;
+}
+
+/* 実際にフェードインさせる要素 */
+#boxset2 div p {
+	margin:0;
+	color:#fff;
+	width:100%;
+	height:100%;
+	display:none;
+}
+#boxset2 div p a {
+	display:block;
+	background:#079;
+	color:#fff;
+	font-size:20px;
+	width:100%;
+	height:100%;
+	
+	padding-top:14px;
+	text-align:center;
+	box-sizing:border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+/*************************************************
+例3
+*************************************************/
+/* フェードインさせる要素を包含する */
+#boxset3 {
+	width:232px;
+}
+
+/* 未表示の場合でも表示領域を確保するために必要 */
+#boxset3 div {
+	width:50px;
+	height:50px;
+	float:left;
+	overflow:hidden;
+	margin-right:8px;
+	margin-bottom:8px;
+}
+
+/* 実際にフェードインさせる要素 */
+#boxset3 div p {
+	margin:0;
+	background:#790;
+	color:#fff;
+	font-size:20px;
+	width:100%;
+	height:100%;
+	display:none;
+	
+	padding-top:14px;
+	text-align:center;
+	box-sizing:border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}

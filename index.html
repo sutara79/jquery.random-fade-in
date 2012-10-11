@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery.randomFadeIn.js</title>
+		<link rel="stylesheet" type="text/css" href="sample.css">
+		<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.randomFadeIn.1.1.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$('#boxset').randomFadeIn();
+				$('#boxset2').randomFadeIn('slow');
+				$('#boxset3').randomFadeIn(500, false);
+
+				//select language
+				$('#language button').click(function(ev) {
+					$('*[class*=lang_]').hide();
+					$('button[id*=lang_]').removeAttr('disabled');
+					$('.' + $(ev.target).attr('id')).show();
+					$(ev.target).attr('disabled', 'disabled');
+				});
+				$('.lang_ja').hide();
+				$('#lang_en').attr('disabled', 'disabled');
+			});
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1>jQuery.randomFadeIn.1.1.js</h1>
+			<p class="date">2012-10-11</p>
+			<p class="lang_en">An item is displayed by fade-in at random. </p>
+			<p class="lang_ja">ランダムにフェードインで要素を表示させます。</p>
+		</header>
+        <div id="language">
+            <button id="lang_en">English</button>
+            <button id="lang_ja">Japanese</button>
+        </div>
+		<nav>
+			<ol>
+				<li><a href="#20121010_1">
+					<span class="lang_ja">基本</span>
+					<span class="lang_en">Basics</span>
+				</a></li>
+				<li><a href="#20121010_2">
+					<span class="lang_ja">表示間隔を指定する</span>
+					<span class="lang_en">Setting a duration</span>
+				</a></li>
+				<li><a href="#20121010_3">
+					<span class="lang_ja">繰り返しをさせない</span>
+					<span class="lang_en">Do not repeat</span>
+				</a></li>
+			</ol>
+		</nav>
+		<article>
+			<section id="20121010_1">
+				<h3>
+					<span class="lang_ja">基本</span>
+					<span class="lang_en">Basics</span>
+				</h3>
+				<div id="boxset">
+					<div><p>F</p></div>
+					<div><p>a</p></div>
+					<div><p>d</p></div>
+					<div><p>e</p></div>
+					<div><p>i</p></div>
+					<div><p>n</p></div>
+					<div><p>I</p></div>
+					<div><p>m</p></div>
+					<div><p>g</p></div>
+				</div>
+<pre>
+$(<span class="green">'#boxset'</span>).randomFadeIn();
+
+&lt;div id="<span class="green">boxset</span>"&gt;
+	&lt;div&gt;&lt;p&gt;F&lt;/p&gt;&lt;/div&gt;
+	&lt;div&gt;&lt;p&gt;a&lt;/p&gt;&lt;/div&gt;
+	&lt;div&gt;&lt;p&gt;d&lt;/p&gt;&lt;/div&gt;
+	&lt;div&gt;&lt;p&gt;e&lt;/p&gt;&lt;/div&gt;
+	&lt;div&gt;&lt;p&gt;i&lt;/p&gt;&lt;/div&gt;
+	&lt;div&gt;&lt;p&gt;n&lt;/p&gt;&lt;/div&gt;
+	&lt;div&gt;&lt;p&gt;I&lt;/p&gt;&lt;/div&gt;
+	&lt;div&gt;&lt;p&gt;m&lt;/p&gt;&lt;/div&gt;
+	&lt;div&gt;&lt;p&gt;g&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+			</section>
+			<section id="20121010_2">
+				<h3>
+					<span class="lang_ja">表示間隔を指定する</span>
+					<span class="lang_en">Setting a duration</span>
+				</h3>
+				<p class="lang_en">
+					You can set a duration by the first argument.<br>
+					You can use the parameters for jQuery "fadeIn()".
+				</p>
+				<p class="lang_ja">
+					第1引数で表示間隔を指定できます。<br>
+					jQueryの"fadeIn()"で指定する値をそのまま使えます。
+				</p>
+				<div id="boxset2">
+					<div><p><a href="http://d.hatena.ne.jp/sutara_lumpur/20120421/1335009088" target="_blank">F</a></p></div>
+					<div><p><a href="http://d.hatena.ne.jp/sutara_lumpur/20120421/1335009088" target="_blank">a</a></p></div>
+					<div><p><a href="http://d.hatena.ne.jp/sutara_lumpur/20120421/1335009088" target="_blank">d</a></p></div>
+					<div><p><a href="http://d.hatena.ne.jp/sutara_lumpur/20120421/1335009088" target="_blank">e</a></p></div>
+					<div><p><a href="http://d.hatena.ne.jp/sutara_lumpur/20120421/1335009088" target="_blank">i</a></p></div>
+					<div><p><a href="http://d.hatena.ne.jp/sutara_lumpur/20120421/1335009088" target="_blank">n</a></p></div>
+					<div><p><a href="http://d.hatena.ne.jp/sutara_lumpur/20120421/1335009088" target="_blank">I</a></p></div>
+					<div><p><a href="http://d.hatena.ne.jp/sutara_lumpur/20120421/1335009088" target="_blank">m</a></p></div>
+					<div><p><a href="http://d.hatena.ne.jp/sutara_lumpur/20120421/1335009088" target="_blank">g</a></p></div>
+				</div>
+<pre>
+$('#boxset2').randomFadeIn(<span class="green">'slow'</span>);
+</pre>
+			</section>
+			<section id="20121010_3">
+				<h3>
+					<span class="lang_ja">繰り返しをさせない</span>
+					<span class="lang_en">Do not repeat</span>
+				</h3>
+				<p class="lang_en">
+					You can control with the second argument whether it is repeated.
+				</p>
+				<p class="lang_ja">
+					第2引数でフェードインの繰り返しを指定できます。<br>
+					"true"なら繰り返し、"false"なら繰り返しません。<br>
+					デフォルトでは繰り返します。
+				</p>
+				<div id="boxset3">
+					<div><p>F</p></div>
+					<div><p>a</p></div>
+					<div><p>d</p></div>
+					<div><p>e</p></div>
+					<div><p>i</p></div>
+					<div><p>n</p></div>
+					<div><p>I</p></div>
+					<div><p>m</p></div>
+					<div><p>g</p></div>
+				</div>
+<pre>
+$('#boxset3').randomFadeIn(500, <span class="green">false</span>);
+</pre>
+			</section>
+		</article>
+	</body>
+</html>
