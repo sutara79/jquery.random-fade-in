@@ -2,44 +2,29 @@
 <html lang="ja">
 	<head>
 		<meta charset="UTF-8">
-		<title>jQuery.randomFadeIn.js</title>
-		<link rel="stylesheet" type="text/css" href="sample.css">
-		<script src="http://code.jquery.com/jquery.min.js"></script>
-		<script src="jquery.randomFadeIn.1.2.js"></script>
-		<script>
-			jQuery(document).ready(function($) {
-				$('#boxset').randomFadeIn();
-				$('#boxset2').randomFadeIn('slow');
-				$('#boxset3').randomFadeIn(500, false);
-
-				//select language
-				$('#language button').click(function(ev) {
-					$('*[class*=lang_]').hide();
-					$('button[id*=lang_]').removeAttr('disabled');
-					$('.' + $(ev.target).attr('id')).show();
-					$(ev.target).attr('disabled', 'disabled');
-				});
-				$('.lang_ja').hide();
-				$('#lang_en').attr('disabled', 'disabled');
-			});
-		</script>
+		<title>jQuery.randomFadeIn</title>
+		<link rel="stylesheet" type="text/css" href="sample/sample.css">
 	</head>
 	<body>
 		<header>
-			<h1>jQuery.randomFadeIn.1.2.js</h1>
-			<time>2013-08-03</time>
+			<h1>jQuery.randomFadeIn</h1>
+			<time>version: 1.2.1 (2014-06-22)</time>
+			<ul>
+				<li><a href="https://github.com/SutaraLumpur/jquery.randomFadeIn.js">GitHub</a></li>
+				<li><a href="JSDoc/">JSDoc</a></li>
+			</ul>
 			<p class="lang_en">An item is displayed by fade-in at random. </p>
 			<p class="lang_ja">ランダムにフェードインで要素を表示させます。</p>
 		</header>
-        <div id="language">
-            <button id="lang_en">English</button>
-            <button id="lang_ja">Japanese</button>
-        </div>
+		<div id="language">
+			<button id="lang_en">English</button>
+			<button id="lang_ja">Japanese</button>
+		</div>
 		<nav>
 			<ol>
 				<li><a href="#20121010_1">
 					<span class="lang_ja">基本</span>
-					<span class="lang_en">Basics</span>
+					<span class="lang_en">Basic</span>
 				</a></li>
 				<li><a href="#20121010_2">
 					<span class="lang_ja">表示間隔を指定する</span>
@@ -55,7 +40,7 @@
 			<section id="20121010_1">
 				<h3>
 					<span class="lang_ja">基本</span>
-					<span class="lang_en">Basics</span>
+					<span class="lang_en">Basic</span>
 				</h3>
 				<div id="boxset">
 					<div><p>F</p></div>
@@ -141,5 +126,10 @@ $('#boxset3').randomFadeIn(500, <span class="green">false</span>);
 </pre>
 			</section>
 		</article>
+
+		<!-- JavaScript -->
+		<script src="http://code.jquery.com/jquery.min.js"></script>
+		<script src="jquery.randomFadeIn.1.2.1.js"></script>
+		<script src="sample/sample.js"></script>
 	</body>
 </html>

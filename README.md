@@ -3,11 +3,14 @@ A jQuery plugin for displaying an item by fade-in at random.
 
 
 ## Demo
-[http://usamimi.info/~sutara/sample/randomFadeIn/](http://usamimi.info/~sutara/sample/randomFadeIn/)
+http://usamimi.info/~sutara/sample/randomFadeIn/
+
+## JSDoc
+http://usamimi.info/~sutara/sample/randomFadeIn/JSDoc/
 
 
 ## Usage
-#### HTML
+###### HTML
 ``` html
 <div id="boxset01">
 	<div><img src="..."></div>
@@ -17,7 +20,7 @@ A jQuery plugin for displaying an item by fade-in at random.
 <script src="jquery.randomFadeIn.0.0.js"></script>
 ```
 
-#### jQuery
+###### jQuery
 ``` javascript
 $('#boxset01').randomFadeIn('slow');
 ```
