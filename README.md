@@ -1,4 +1,4 @@
-# jquery.randomFadeIn
+# jquery.random-fade-in
 A jQuery plugin for displaying an item by fade-in at random.
 
 

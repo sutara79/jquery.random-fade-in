@@ -1,6 +1,6 @@
 /**
- * @file jQuery Plugin: jquery.randomFadeIn
- * @version 1.2.1
+ * @file jQuery Plugin: jquery.random-fade-in
+ * @version 1.2.2
  * @author Yuusaku Miyazaki [toumin.m7@gmail.com]
  * @license MIT License
  */

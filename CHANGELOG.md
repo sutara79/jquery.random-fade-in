@@ -1,4 +1,8 @@
-# Change Log
+# Change Log for jquery.random-fade-in
+
+### v1.2.2 (2014-08-08)
+- Plugin name was changed.  
+  (プラグイン名、ファイル名、フォルダ名を変更しました。)
 
 ### v1.2.1 (2014-06-22)
 - JSDoc was created.  
