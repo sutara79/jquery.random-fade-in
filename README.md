@@ -3,10 +3,10 @@ A jQuery plugin for displaying an item by fade-in at random.
 
 
 ## Demo
-http://usamimi.info/~sutara/sample/randomFadeIn/
+http://usamimi.info/~sutara/sample/random-fade-in/
 
 ## JSDoc
-http://usamimi.info/~sutara/sample/randomFadeIn/JSDoc/
+http://usamimi.info/~sutara/sample/random-fade-in/jsdoc/
 
 
 ## Usage
