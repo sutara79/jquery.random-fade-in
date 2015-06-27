@@ -1,13 +1,8 @@
 # jquery.random-fade-in
 A jQuery plugin for displaying an item by fade-in at random.
 
-
 ## Demo
 http://usamimi.info/~sutara/sample/random-fade-in/
-
-## JSDoc
-http://usamimi.info/~sutara/sample/random-fade-in/jsdoc/
-
 
 ## Usage
 ###### HTML
@@ -24,7 +19,6 @@ http://usamimi.info/~sutara/sample/random-fade-in/jsdoc/
 ``` javascript
 $('#boxset01').randomFadeIn('slow');
 ```
-
 
 ## Option
 you can set some properties of this plugin like following.  
@@ -56,7 +50,6 @@ Yuusaku Miyazaki (宮崎 雄策)
 
 * [Mail](toumin.m7@gmail.com)
 * [Blog](http://d.hatena.ne.jp/sutara_lumpur/20120421/1335009088)
-
 
 ## License
 [MIT License](http://www.opensource.org/licenses/mit-license.php)
