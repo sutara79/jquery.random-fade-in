@@ -1,0 +1,30 @@
+{
+  "name": "jquery.random-fade-in",
+  "version": "1.3.0",
+  "license": "MIT",
+  "author": "Yuusaku Miyazaki <toumin.m7@gmail.com>",
+  "homepage": "https://github.com/sutara79/jquery.random-fade-in",
+  "main": "dist/jquery.random-fade-in.min.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sutara79/jquery.random-fade-in.git"
+  },
+  "keywords": [
+    "jquery-plugin",
+    "fadein"
+  ],
+  "dependencies": {
+    "jquery": ">=3.0.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-uglify": "^2.3.0",
+    "grunt-coveralls": "^1.0.1",
+    "grunt-qunit-istanbul": "^0.6.0"
+  },
+  "scripts": {
+    "test": "grunt qunit",
+    "uglify": "grunt uglify",
+    "coveralls": "grunt coveralls"
+  }
+}

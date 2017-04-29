@@ -1,134 +1,218 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
-	<head>
-		<meta charset="UTF-8">
-		<title>jQuery.randomFadeIn</title>
-		<link rel="stylesheet" type="text/css" href="sample/sample.css">
-	</head>
-	<body>
-		<header>
-			<h1>jquery.random-fade-in</h1>
-			<time>version: 1.2.2</time>
-			<ul>
-				<li><a href="//github.com/sutara79/jquery.random-fade-in/">GitHub</a></li>
-			</ul>
-			<p class="lang_en">An item is displayed by fade-in at random. </p>
-			<p class="lang_ja">ランダムにフェードインで要素を表示させます。</p>
-		</header>
-		<div id="language">
-			<button id="lang_en">English</button>
-			<button id="lang_ja">Japanese</button>
-		</div>
-		<nav>
-			<ol>
-				<li><a href="#20121010_1">
-					<span class="lang_ja">基本</span>
-					<span class="lang_en">Basic</span>
-				</a></li>
-				<li><a href="#20121010_2">
-					<span class="lang_ja">表示間隔を指定する</span>
-					<span class="lang_en">Setting a duration</span>
-				</a></li>
-				<li><a href="#20121010_3">
-					<span class="lang_ja">繰り返しをさせない</span>
-					<span class="lang_en">Do not repeat</span>
-				</a></li>
-			</ol>
-		</nav>
-		<article>
-			<section id="20121010_1">
-				<h3>
-					<span class="lang_ja">基本</span>
-					<span class="lang_en">Basic</span>
-				</h3>
-				<div id="boxset">
-					<div><p>F</p></div>
-					<div><p>a</p></div>
-					<div><p>d</p></div>
-					<div><p>e</p></div>
-					<div><p>i</p></div>
-					<div><p>n</p></div>
-					<div><p>I</p></div>
-					<div><p>m</p></div>
-					<div><p>g</p></div>
-				</div>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>jquery.random-fade-in</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="sample/sample.css">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="dist/jquery.random-fade-in.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.simple-scroll-follow/3.0.0/jquery.simple-scroll-follow.min.js"></script>
+<script src="sample/sample.js"></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+<body>
+<header class="jumbotron">
+  <div class="container">
+    <h1 class="page-title">jquery.random-fade-in</h1>
+    <p class="lang_en">
+      jQuery plugin to fade-in at random.
+    </p>
+    <p class="lang_ja">
+      ランダムにフェードインで要素を表示します。
+    </p>
+    <dl class="dl-horizontal">
+      <dt>Version</dt><dd><a href="https://badge.fury.io/js/jquery.random-fade-in"><img src="https://badge.fury.io/js/jquery.random-fade-in.svg" alt="npm version" height="20"></a></dd>
+      <dt>Author</dt><dd>Yuusaku Miyazaki</dd>
+      <dt>License</dt><dd><a class="jumbotron-link" href="https://opensource.org/licenses/mit-license.php">MIT</a></dd>
+    </dl>
+    <p>
+      <a class="github-button" href="https://github.com/sutara79/jquery.random-fade-in" data-style="mega" data-count-href="/sutara79/jquery.random-fade-in/stargazers" data-count-api="/repos/sutara79/jquery.random-fade-in#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star sutara79/jquery.random-fade-in on GitHub">GitHub</a>
+      <a class="github-button" href="https://github.com/sutara79/jquery.random-fade-in/archive/master.zip" data-icon="octicon-cloud-download" data-style="mega" aria-label="Download sutara79/jquery.random-fade-in on GitHub">Download</a>
+    </p>
+  </div>
+</header>
+<div class="container">
+  <div id="contents" class="row">
+    <nav id="index">
+      <div id="language" class="btn-group">
+        <button id="lang_en" class="btn btn-primary">English</button>
+        <button id="lang_ja" class="btn btn-primary">Japanese</button>
+      </div>
+      <h3>
+        <span class="lang_en">Index</span>
+        <span class="lang_ja">目次</span>
+      </h3>
+      <div class="list-group">
+        <a class="list-group-item" href="#basic">
+          <span class="lang_en">Basic</span>
+          <span class="lang_ja">基本</span>
+        </a>
+        <a class="list-group-item" href="#duration">
+          <span class="lang_en">Duration</span>
+          <span class="lang_ja">フェードイン処理にかける時間</span>
+        </a>
+        <a class="list-group-item" href="#no-repeat">
+          <span class="lang_en">No repeat</span>
+          <span class="lang_ja">繰り返しをさせない</span>
+        </a>
+        <a class="list-group-item" href="#no-repeat">
+          <span class="lang_en">Reset</span>
+          <span class="lang_ja">リセットする</span>
+        </a>
+      </div>
+    </nav>
+    <article>
+      <section id="basic" class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <span class="lang_en">Basic</span>
+            <span class="lang_ja">基本</span>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="btn-container">
+            <a class="btn btn-primary" href="sample/basic/" target="_blank">
+              Sample <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+            </a>
+          </div>
+          <h6>HTML</h6>
 <pre>
-$(<span class="green">'#boxset'</span>).randomFadeIn();
-
-&lt;div id="<span class="green">boxset</span>"&gt;
-	&lt;div&gt;&lt;p&gt;F&lt;/p&gt;&lt;/div&gt;
-	&lt;div&gt;&lt;p&gt;a&lt;/p&gt;&lt;/div&gt;
-	&lt;div&gt;&lt;p&gt;d&lt;/p&gt;&lt;/div&gt;
-	&lt;div&gt;&lt;p&gt;e&lt;/p&gt;&lt;/div&gt;
-	&lt;div&gt;&lt;p&gt;i&lt;/p&gt;&lt;/div&gt;
-	&lt;div&gt;&lt;p&gt;n&lt;/p&gt;&lt;/div&gt;
-	&lt;div&gt;&lt;p&gt;I&lt;/p&gt;&lt;/div&gt;
-	&lt;div&gt;&lt;p&gt;m&lt;/p&gt;&lt;/div&gt;
-	&lt;div&gt;&lt;p&gt;g&lt;/p&gt;&lt;/div&gt;
+&lt;div class="box-container"&gt;
+  &lt;div&gt;<span class="red">&lt;!-- Wrapper (Required) --&gt;</span>
+    &lt;p&gt;foo&lt;/p&gt;<span class="green">&lt;!-- Target to fade-in --&gt;</span>
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;p&gt;bar&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;p&gt;baz&lt;/p&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
-</pre>
-			</section>
-			<section id="20121010_2">
-				<h3>
-					<span class="lang_ja">表示間隔を指定する</span>
-					<span class="lang_en">Setting a duration</span>
-				</h3>
-				<p class="lang_en">
-					You can set a duration by the first argument.<br>
-					You can use same parameters for jQuery "fadeIn()".
-				</p>
-				<p class="lang_ja">
-					第1引数で表示間隔を指定できます。<br>
-					jQueryの"fadeIn()"で指定する値をそのまま使えます。
-				</p>
-				<div id="boxset2">
-					<div><p><a href="//d.hatena.ne.jp/sutara_lumpur/20120421/1335009088" target="_blank">F</a></p></div>
-					<div><p><a href="//d.hatena.ne.jp/sutara_lumpur/20120421/1335009088" target="_blank">a</a></p></div>
-					<div><p><a href="//d.hatena.ne.jp/sutara_lumpur/20120421/1335009088" target="_blank">d</a></p></div>
-					<div><p><a href="//d.hatena.ne.jp/sutara_lumpur/20120421/1335009088" target="_blank">e</a></p></div>
-					<div><p><a href="//d.hatena.ne.jp/sutara_lumpur/20120421/1335009088" target="_blank">i</a></p></div>
-					<div><p><a href="//d.hatena.ne.jp/sutara_lumpur/20120421/1335009088" target="_blank">n</a></p></div>
-					<div><p><a href="//d.hatena.ne.jp/sutara_lumpur/20120421/1335009088" target="_blank">I</a></p></div>
-					<div><p><a href="//d.hatena.ne.jp/sutara_lumpur/20120421/1335009088" target="_blank">m</a></p></div>
-					<div><p><a href="//d.hatena.ne.jp/sutara_lumpur/20120421/1335009088" target="_blank">g</a></p></div>
-				</div>
-<pre>
-$('#boxset2').randomFadeIn(<span class="green">'slow'</span>);
-</pre>
-			</section>
-			<section id="20121010_3">
-				<h3>
-					<span class="lang_ja">繰り返しをさせない</span>
-					<span class="lang_en">Do not repeat</span>
-				</h3>
-				<p class="lang_en">
-					You can control with the second argument whether it is repeated.
-				</p>
-				<p class="lang_ja">
-					第2引数でフェードインの繰り返しを指定できます。<br>
-					"true"なら繰り返し、"false"なら繰り返しません。<br>
-					デフォルトでは繰り返します。
-				</p>
-				<div id="boxset3">
-					<div><p>F</p></div>
-					<div><p>a</p></div>
-					<div><p>d</p></div>
-					<div><p>e</p></div>
-					<div><p>i</p></div>
-					<div><p>n</p></div>
-					<div><p>I</p></div>
-					<div><p>m</p></div>
-					<div><p>g</p></div>
-				</div>
-<pre>
-$('#boxset3').randomFadeIn(500, <span class="green">false</span>);
-</pre>
-			</section>
-		</article>
 
-		<!-- JavaScript -->
-		<script src="//code.jquery.com/jquery.min.js"></script>
-		<script src="jquery.random-fade-in.js"></script>
-		<script src="sample/sample.js"></script>
-	</body>
+&lt;script src="https://code.jquery.com/jquery-3.2.1.min.js"&gt;&lt;/script&gt;
+&lt;script src="jquery.random-fade-in.min.js"&gt;&lt;/script&gt;
+</pre>
+          <p class="lang_en">
+            If you want to make fade-in &lt;p&gt;, you MUST wrap it by empty element like &lt;div&gt;.
+          </p>
+          <p class="lang_ja">
+            &lt;p&gt;要素をフェードインさせたい場合、必ず空要素で包まなければなりません。(上の例では&lt;div&gt;要素)
+          </p>
+          <h6>CSS</h6>
+<pre>
+.box-container div p {
+  <span class="green">display: none;</span> <span class="red">/* Required */</span>
+}
+</pre>
+          <h6>JavaScript</h6>
+<pre>
+$('.box-container').randomFadeIn();
+</pre>
+         </div>
+      </section>
+
+      <section id="duration" class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <span class="lang_en">Duration</span>
+            <span class="lang_ja">フェードイン処理にかける時間</span>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="btn-container">
+            <a class="btn btn-primary" href="sample/duration/" target="_blank">
+              Sample <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+            </a>
+          </div>
+          <h6>JavaScript</h6>
+<pre>
+$('.box-container').randomFadeIn(<span class="green">'slow'</span>);
+$('.box-container').randomFadeIn(<span class="green">1000</span>);
+</pre>
+          <p class="lang_en">
+            You can set duration by 1st argument which is same to <a href="http://api.jquery.com/fadeIn/">jQuery ".fadeIn()"</a>.
+          </p>
+          <p class="lang_ja">
+            第1引数でフェードイン処理にかける時間を指定できます。<br>
+            <a href="http://api.jquery.com/fadeIn/">jQueryの"fadeIn()"</a>で指定する値と同じです。
+          </p>
+        </div>
+      </section>
+
+      <section id="no-repeat" class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <span class="lang_en">No repeat</span>
+            <span class="lang_ja">繰り返しをさせない</span>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="btn-container">
+            <a class="btn btn-primary" href="sample/no-repeat/" target="_blank">
+              Sample <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+            </a>
+          </div>
+          <h6>JavaScript</h6>
+<pre>
+// Repeat (Default)
+$('.box-container').randomFadeIn('slow', <span class="green">true</span>);
+
+// No repeat
+$('.box-container').randomFadeIn('slow', <span class="red">false</span>);
+</pre>
+          <p class="lang_en">
+            You can set not to repeat by 2nd argument.
+          </p>
+          <p class="lang_ja">
+            第1引数でフェードイン処理にかける時間を指定できます。<br>
+            <a href="http://api.jquery.com/fadeIn/">jQueryの"fadeIn()"</a>で指定する値と同じです。
+          </p>
+        </div>
+      </section>
+
+      <section id="reset" class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <span class="lang_en">Reset</span>
+            <span class="lang_ja">リセットする</span>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="btn-container">
+            <a class="btn btn-primary" href="sample/reset/" target="_blank">
+              Sample <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+            </a>
+          </div>
+          <p>Since: v1.3.0</p>
+          <h6>JavaScript</h6>
+<pre>
+// Initial apply
+$('.box-container').randomFadeIn('', false);
+
+// Reset
+$('#reset1').click(function() {
+  $('.box-container').randomFadeIn('', false);
+});
+$('#reset2').click(function() {
+  $('.box-container').randomFadeIn(100);
+});
+</pre>
+        </div>
+      </section>
+
+    </article>
+  </div><!-- .row -->
+</div><!-- .container -->
+<footer>
+  <div class="container">
+    powered by <a href="https://getbootstrap.com/">Bootstrap</a>
+  </div>
+</footer>
+<div id="jump_to_top">
+  <a href="#" class="glyphicon glyphicon-upload" aria-hidden="true"></a>
+</div>
+</body>
 </html>

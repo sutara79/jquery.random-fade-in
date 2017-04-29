@@ -1,0 +1,33 @@
+.box-container {
+  width: 232px;
+}
+
+/* 未表示の場合でも表示領域を確保するために必要 */
+.box-container div {
+  float: left;
+  height: 50px;
+  margin-bottom: 8px;
+  margin-right: 8px;
+  overflow: hidden;
+  width: 50px;
+}
+
+/* 実際にフェードインさせる要素 */
+.box-container div p {
+  background: #097;
+  box-sizing: border-box;
+  color: #fff;
+  display: none;
+  font-size: 20px;
+  height: 100%;
+  margin: 0;
+  padding-top: 14px;
+  text-align: center;
+  width: 100%;
+}
+
+.clearfix:after {
+  clear: both;
+  content: '';
+  display: block;
+}

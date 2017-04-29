@@ -1,4 +1,10 @@
-# jquery.random-fade-in CHANGELOG
+# CHANGELOG: jquery.random-fade-in 
+
+## v1.3.0 (2017-04-30)
+- Add ability to reset.
+- Improve the structure of source code.
+- Add a distribution via npm.
+- Set unit testing and code coverage.
 
 ## v1.2.2 (2014-08-08)
 - Plugin name was changed.  

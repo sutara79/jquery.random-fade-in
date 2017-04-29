@@ -1,196 +1,179 @@
+body {
+  background-color: #eee;
+  -webkit-text-size-adjust: 100%;
+  font-size: 15px;
+}
+
+#contents {
+  position: relative;
+}
+
+/* for PC */
+@media screen and (min-width:992px) {
+  nav {
+    bottom: auto;
+    box-sizing: border-box;
+    left: auto;
+    padding: 0 15px;
+    position: absolute;
+    right: auto;
+    top: 0;
+    width: 34%;
+  }
+
+  article {
+    bottom: auto;
+    box-sizing: border-box;
+    left: 34%;
+    padding: 0 15px;
+    position: relative;
+    right: auto;
+    top: 0;
+    width: 66%;
+  }
+}
+
+/* for Smart Phone */
+@media screen and (max-width:991px) {
+  nav {
+    bottom: auto;
+    box-sizing: border-box;
+    left: auto;
+    padding: 0 15px;
+    position: static;
+    right: auto;
+    top: auto;
+    width: 100%;
+  }
+
+  article {
+    bottom: auto;
+    box-sizing: border-box;
+    left: auto;
+    padding: 0 15px;
+    position: static;
+    right: auto;
+    top: auto;
+    width: 100%;
+  }
+}
+
+footer {
+  background: #eee;
+}
+
+footer div {
+  padding: 16px 0;
+  text-align: right;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+#list4 th:nth-child(3) {
+  min-width: 120px;
+}
+
 pre {
-	clear:both;
-	background: #444;
-	color:#fff;
-	font-size:15px;
-	padding:8px;
-}
-h3 {
-	margin-top:2em;
-	border-left:8px solid #486;
-	border-bottom:2px solid #486;
-	padding:4px 8px;
-}
-.green{
-	color:#2e4;
-}
-.red{
-	color:#e42;
-}
-#language {
-	padding:4px;
-	border:1px solid #aaa;
-	background:#eef;
-	position:fixed;
-	top:0px;
-	right:0px;
+  font-size: 15px;
 }
 
-/*************************************************
-例1
-*************************************************/
-/* フェードインさせる要素を包含する */
-#boxset {
-	width:232px;
+article form a.btn,
+article form input,
+article form button {
+  margin-bottom: 4px;
 }
 
-/* 未表示の場合でも表示領域を確保するために必要 */
-#boxset div {
-	width:50px;
-	height:50px;
-	float:left;
-	overflow:hidden;
-	margin-right:8px;
-	margin-bottom:8px;
+.green {
+  color: #5cb85c;
+}
+.red {
+  color: #d9534f;
 }
 
-/* 実際にフェードインさせる要素 */
-#boxset div p {
-	margin:0;
-	background:#097;
-	color:#fff;
-	font-size:20px;
-	width:100%;
-	height:100%;
-	display:none;
-	
-	padding-top:14px;
-	text-align:center;
-	box-sizing:border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	-ms-box-sizing: border-box;
+#jump_to_top {
+  bottom: 16px;
+  position: fixed;
+  right: 16px;
+}
+#jump_to_top a,
+#jump_to_top a:hover {
+  color: #aa9;
+  font-size: 2.5em;
+  text-decoration: none;
+}
+.btn-container {
+  margin-bottom: 1.2em;
 }
 
-/*************************************************
-例2
-*************************************************/
-/* フェードインさせる要素を包含する */
-#boxset2 {
-	width:348px;
-	height:166px;
-	position:relative;
+/**
+ * Override Bootstrap3
+ */
+.jumbotron {
+  background-color: #486;
+  background-image: linear-gradient(30deg, #3d8260 12%, transparent 12.5%, transparent 87%, #3d8260 87.5%, #3d8260),
+  linear-gradient(150deg, #3d8260 12%, transparent 12.5%, transparent 87%, #3d8260 87.5%, #3d8260),
+  linear-gradient(30deg, #3d8260 12%, transparent 12.5%, transparent 87%, #3d8260 87.5%, #3d8260),
+  linear-gradient(150deg, #3d8260 12%, transparent 12.5%, transparent 87%, #3d8260 87.5%, #3d8260),
+  linear-gradient(60deg, #4a8e6c 25%, transparent 25.5%, transparent 75%, #4a8e6c 75%, #4a8e6c),
+  linear-gradient(60deg, #4a8e6c 25%, transparent 25.5%, transparent 75%, #4a8e6c 75%, #4a8e6c);
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+  background-size: 80px 140px;
+  box-shadow: 0 1px 2px #666;
+  color: #fff;
+  text-shadow: 0 1px 1px #333;
 }
-
-/* 未表示の場合でも表示領域を確保するために必要 */
-#boxset2 div {
-	position:absolute;
-	margin-right:8px;
-	margin-bottom:8px;
+.page-title {
+  font-family: Arial;
 }
-#boxset2 div:nth-child(1) {
-	width:108px;
-	height:108px;
-	top:0;
-	left:0;
+.jumbotron-link,
+.jumbotron-link:hover {
+  color: inherit;
 }
-#boxset2 div:nth-child(2) {
-	width:50px;
-	height:50px;
-	top:0;
-	left:116px;
+.list-group-item:first-child {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
 }
-#boxset2 div:nth-child(3) {
-	width:50px;
-	height:50px;
-	top:0;
-	left:174px;
+.list-group-item:last-child {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
-#boxset2 div:nth-child(4) {
-	width:108px;
-	height:108px;
-	top:0;
-	left:232px;
+.panel-primary {
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px #aaa;
+  margin-bottom: 30px;
 }
-#boxset2 div:nth-child(5) {
-	width:50px;
-	height:50px;
-	top:116px;
-	left:0px;
+.panel-primary > .panel-heading {
+  background-color: #777;
+  border-color: #777;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
 }
-#boxset2 div:nth-child(6) {
-	width:50px;
-	height:50px;
-	top:116px;
-	left:58px;
+.btn-primary {
+  background-color: #597;
+  border-color: #509472;
 }
-#boxset2 div:nth-child(7) {
-	width:108px;
-	height:108px;
-	top:58px;
-	left:116px;
+.btn-primary:hover,
+.btn-primary[disabled]:focus,
+.btn-primary[disabled]:hover {
+  background-color: #486;
+  border-color: #3f8361;
 }
-#boxset2 div:nth-child(8) {
-	width:50px;
-	height:50px;
-	top:116px;
-	left:232px;
+.btn-primary:active,
+.btn-primary:active:hover,
+.btn-primary:active:focus,
+.btn-primary:focus {
+  background-color: #375;
+  border-color: #2d7250;
 }
-#boxset2 div:nth-child(9) {
-	width:50px;
-	height:50px;
-	top:116px;
-	left:290px;
+a,
+a:active {
+  color: #486;
 }
-
-/* 実際にフェードインさせる要素 */
-#boxset2 div p {
-	margin:0;
-	color:#fff;
-	width:100%;
-	height:100%;
-	display:none;
-}
-#boxset2 div p a {
-	display:block;
-	background:#079;
-	color:#fff;
-	font-size:20px;
-	width:100%;
-	height:100%;
-	
-	padding-top:14px;
-	text-align:center;
-	box-sizing:border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-}
-/*************************************************
-例3
-*************************************************/
-/* フェードインさせる要素を包含する */
-#boxset3 {
-	width:232px;
-}
-
-/* 未表示の場合でも表示領域を確保するために必要 */
-#boxset3 div {
-	width:50px;
-	height:50px;
-	float:left;
-	overflow:hidden;
-	margin-right:8px;
-	margin-bottom:8px;
-}
-
-/* 実際にフェードインさせる要素 */
-#boxset3 div p {
-	margin:0;
-	background:#790;
-	color:#fff;
-	font-size:20px;
-	width:100%;
-	height:100%;
-	display:none;
-	
-	padding-top:14px;
-	text-align:center;
-	box-sizing:border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	-ms-box-sizing: border-box;
+a:hover,
+a:focus {
+  color: #375;
 }
