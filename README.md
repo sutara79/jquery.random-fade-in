@@ -1,22 +1,19 @@
-jquery.random-fade-in
-=============================
+# jquery.random-fade-in
 
 [![Build Status](https://travis-ci.org/sutara79/jquery.random-fade-in.svg?branch=master)](https://travis-ci.org/sutara79/jquery.random-fade-in)
 [![Coverage Status](https://coveralls.io/repos/github/sutara79/jquery.random-fade-in/badge.svg?branch=master)](https://coveralls.io/github/sutara79/jquery.random-fade-in?branch=master)
 [![dependencies Status](https://david-dm.org/sutara79/jquery.random-fade-in/status.svg)](https://david-dm.org/sutara79/jquery.random-fade-in)
 
-
 jQuery plugin to fade-in at random.
 
+![Sample image](sample/image.png)
 
-Demo
------------------------------
 
+## Demo
 https://sutara79.github.io/jquery.random-fade-in/
 
 
-Install
------------------------------
+## Install
 - [GitHub](https://github.com/sutara79/jquery.random-fade-in): Clone or download.
 - [npm](https://www.npmjs.com/package/jquery.random-fade-in): `npm i jquery.random-fade-in`
 - [CDN (jsDelivr)](http://www.jsdelivr.com/projects/jquery.random-fade-in):
@@ -30,9 +27,7 @@ Install
     ```
 
 
-Usage
------------------------------
-
+## Usage
 ###### HTML
 ```html
 <div class="box-container">
@@ -64,30 +59,22 @@ $('.box-container').randomFadeIn();
 ```
 
 
-Option
------------------------------
-
+## Option
 |name|type|default|description|
 |--|--|--|--|
 |[1st arg](http://sutara79.github.io/jquery.random-fade-in/#duration)|string, number|`'slow'`|Duration. Same to [jQuery ".fadeIn()"](http://api.jquery.com/fadeIn/).|
 |[2nd arg](http://sutara79.github.io/jquery.random-fade-in/#no-repeat)|boolean|`true`|Whether to repeat.|
 
 
-Compatibility
------------------------------
-
+## Compatibility
 - jQuery: >=3.0.0 ([because of XSS vulnerability](https://nodesecurity.io/advisories/jquery_xss))
 - Browser: Chrome58, Firefox52, IE11, Edge14
 
 
-License
------------------------------
-
+## License
 [MIT](https://www.opensource.org/licenses/mit-license.php)
 
 
-Author
------------------------------
-
+## Author
 [Yuusaku Miyazaki](http://d.hatena.ne.jp/sutara_lumpur/20120421/1335009088)
 ( <toumin.m7@gmail.com> )
