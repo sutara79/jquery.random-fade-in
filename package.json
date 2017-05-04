@@ -1,6 +1,7 @@
 {
   "name": "jquery.random-fade-in",
-  "version": "1.3.0",
+  "description": "jQuery plugin to fade-in at random.",
+  "version": "1.3.1",
   "license": "MIT",
   "author": "Yuusaku Miyazaki <toumin.m7@gmail.com>",
   "homepage": "https://github.com/sutara79/jquery.random-fade-in",
@@ -20,11 +21,13 @@
     "grunt": "^1.0.1",
     "grunt-contrib-uglify": "^2.3.0",
     "grunt-coveralls": "^1.0.1",
-    "grunt-qunit-istanbul": "^0.6.0"
+    "grunt-qunit-istanbul": "^0.6.0",
+    "package-json-validator": "^0.6.1"
   },
   "scripts": {
     "test": "grunt qunit",
     "uglify": "grunt uglify",
-    "coveralls": "grunt coveralls"
+    "coveralls": "grunt coveralls",
+    "pjv": "pjv"
   }
 }

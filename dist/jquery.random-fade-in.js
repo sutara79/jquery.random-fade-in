@@ -1,6 +1,6 @@
 /**
  * @file jquery.random-fade-in
- * @version 1.3.0
+ * @version 1.3.1
  * @author Yuusaku Miyazaki <toumin.m7@gmail.com>
  * @license MIT
  */
@@ -15,7 +15,6 @@
 }(function($, window, document, undefined) {
 
 /**
- * @public
  * @function external:"jQuery.fn".randomFadeIn
  * @arg {null|string|number} args.0 - フェードインにかかる時間 (jQuery.fadeIn()の引数と同じ形式)
  * @arg {boolean} args.1 - フェードインと消去を繰り返すかどうかの真偽値
@@ -28,8 +27,7 @@ $.fn.randomFadeIn = function (duration, isLoop) {
 };
 
 /**
- * @global
- * @constructor
+ * @class external:jQuery.randomFadeIn
  * @classdesc 要素ごとに適用される処理を集めたクラス
  * @arg {Object} elem - プラグインを適用するHTML要素
  * @arg {null|string|number} [duration='slow'] - フェードインにかかる時間 (jQuery.fadeIn()の引数と同じ形式)
