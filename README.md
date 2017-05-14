@@ -16,15 +16,8 @@ https://sutara79.github.io/jquery.random-fade-in/
 ## Install
 - [GitHub](https://github.com/sutara79/jquery.random-fade-in): Clone or download.
 - [npm](https://www.npmjs.com/package/jquery.random-fade-in): `npm i jquery.random-fade-in`
-- [CDN (jsDelivr)](http://www.jsdelivr.com/projects/jquery.random-fade-in):
-    ```javascript
-    <script src="https://cdn.jsdelivr.net/jquery.random-fade-in/1.3.0/jquery.random-fade-in.min.js"></script>
-    ```
-  You can load jQuery and this plugin with single HTTP request.  
-  See [jsDelivr's document](https://github.com/jsdelivr/jsdelivr#load-multiple-files-with-single-http-request)
-    ```javascript
-    <script src="https://cdn.jsdelivr.net/g/jquery@3.2.1,jquery.random-fade-in@1.3.0"></script>
-    ```
+- CDN ([jsDelivr](https://github.com/jsdelivr/jsdelivr#usage)):
+    - jquery.random-fade-in.min.js: [v1.3.1](https://cdn.jsdelivr.net/npm/jquery.random-fade-in@1.3.1/dist/jquery.random-fade-in.min.js)
 
 
 ## Usage
