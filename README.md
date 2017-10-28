@@ -1,5 +1,6 @@
 # jquery.random-fade-in
 
+[![npm version](https://img.shields.io/npm/v/jquery.random-fade-in.svg)](https://www.npmjs.com/package/jquery.random-fade-in)
 [![Build Status](https://travis-ci.org/sutara79/jquery.random-fade-in.svg?branch=master)](https://travis-ci.org/sutara79/jquery.random-fade-in)
 [![Coverage Status](https://coveralls.io/repos/github/sutara79/jquery.random-fade-in/badge.svg?branch=master)](https://coveralls.io/github/sutara79/jquery.random-fade-in?branch=master)
 [![dependencies Status](https://david-dm.org/sutara79/jquery.random-fade-in/status.svg)](https://david-dm.org/sutara79/jquery.random-fade-in)
@@ -17,7 +18,7 @@ https://sutara79.github.io/jquery.random-fade-in/
 - [GitHub](https://github.com/sutara79/jquery.random-fade-in): Clone or download.
 - [npm](https://www.npmjs.com/package/jquery.random-fade-in): `npm i jquery.random-fade-in`
 - CDN ([jsDelivr](https://github.com/jsdelivr/jsdelivr#usage)):
-    - jquery.random-fade-in.min.js: [v1.3.1](https://cdn.jsdelivr.net/npm/jquery.random-fade-in@1.3.1/dist/jquery.random-fade-in.min.js)
+    - jquery.random-fade-in.min.js: [v1.3.2](https://cdn.jsdelivr.net/npm/jquery.random-fade-in@1.3.2/dist/jquery.random-fade-in.min.js)
 
 
 ## Usage

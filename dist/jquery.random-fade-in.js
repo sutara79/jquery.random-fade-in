@@ -1,6 +1,6 @@
 /**
  * @file jquery.random-fade-in
- * @version 1.3.1
+ * @version 1.3.2
  * @author Yuusaku Miyazaki <toumin.m7@gmail.com>
  * @license MIT
  */
