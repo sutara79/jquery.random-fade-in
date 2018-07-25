@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Test</title>
+<link rel="stylesheet" href="../../node_modules/mocha/mocha.css">
+</head>
+<body>
+<div id="mocha"></div>
+
+<!-- Mocha, power-assert, jQuery -->
+<script src="../../node_modules/mocha/mocha.js"></script>
+<script src="../../node_modules/power-assert/build/power-assert.js"></script>
+<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+
+<script>
+mocha.setup('bdd');
+mocha.reporter('html');
+</script>
+
+<!-- target for test -->
+<script src="../../dist/jquery.random-fade-in.js"></script>
+
+<!-- test script -->
+<script src="jQuery.fn/randomFadeIn.js"></script>
+<script src="jQuery.randomFadeIn/shuffleOrder.js"></script>
+
+<script>
+mocha.run(function (err) {
+  $('<div id="done">').appendTo('body');
+});
+</script>
+</body>
+</html>

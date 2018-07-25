@@ -1,6 +1,6 @@
 /**
  * @file jquery.random-fade-in
- * @version 1.3.2
+ * @version 1.3.3
  * @author Yuusaku Miyazaki <toumin.m7@gmail.com>
  * @license MIT
  */
@@ -16,9 +16,9 @@
 
 /**
  * @function external:"jQuery.fn".randomFadeIn
- * @arg {null|string|number} args.0 - フェードインにかかる時間 (jQuery.fadeIn()の引数と同じ形式)
- * @arg {boolean} args.1 - フェードインと消去を繰り返すかどうかの真偽値
- * @return {Object} jQueryオブジェクト
+ * @arg {null|string|number} [duration='slow'] - Duration. Same to jQuery ".fadeIn()"
+ * @arg {boolean}            [isLoop=true]     - Whether to repeat.
+ * @return {Object} jQuery object
  */
 $.fn.randomFadeIn = function (duration, isLoop) {
   return this.each(function() {
@@ -40,7 +40,7 @@ $.fn.randomFadeIn = function (duration, isLoop) {
  */
 $.randomFadeIn = function(elem, duration, isLoop) {
   this.elemChildren = $(elem).children();
-  $(this.elemChildren).children().stop().hide();
+  $(this.elemChildren).children().stop(true, false).hide();
   this.duration = (!duration) ? 'slow' : duration;
   this.isLoop = (isLoop === undefined) ? true : isLoop;
 
@@ -59,10 +59,10 @@ $.extend($.randomFadeIn.prototype, /** @lends external:jQuery.randomFadeIn.proto
 
   /**
    * @private
-   * @desc 配列をシャッフル
-   * @arg {number} len - シャッフル対象の要素の数
-   * @arg {Array} order - シャッフル対象の添え字を収めた配列
-   * @return {Array} シャフル済みの配列
+   * @desc Shuffle the array of elements
+   * @arg {number} len   - The number of elements to be shuffled
+   * @arg {Array}  order - An array that contains indexes of elements to be shuffled
+   * @return {Array} An shuffled array
    */
   _shuffleOrder: function(len, order) {
     var idxLast = len;
@@ -80,8 +80,8 @@ $.extend($.randomFadeIn.prototype, /** @lends external:jQuery.randomFadeIn.proto
 
   /**
    * @private
-   * @desc 順番にフェードイン表示させていく
-   * @arg {number} idx - 配列の中でフェードインさせるものの添字
+   * @desc Run fade-in
+   * @arg {number} idx - An index of element to be fade-in
    */
   _fadeInEach: function(idx) {
     var self = this;
@@ -94,7 +94,7 @@ $.extend($.randomFadeIn.prototype, /** @lends external:jQuery.randomFadeIn.proto
           self._fadeInEach(idx);
         } else if (self.isLoop) {
           //ループの指示があれば、繰り返す。
-          $(self.elemChildren).children().fadeOut(self.isLoop);
+          $(self.elemChildren).children().fadeOut(self.duration);
           self.order = self._shuffleOrder(self.len, self.order);
           self._fadeInEach(0);
         }
