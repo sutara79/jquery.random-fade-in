@@ -22,7 +22,7 @@
     "power-assert": "^1.6.0",
     "connect": "^3.6.6",
     "serve-static": "^1.13.2",
-    "puppeteer": "^1.6.0"
+    "puppeteer": "^1.7.0"
   },
   "scripts": {
     "test": "node ./test/test.js"
